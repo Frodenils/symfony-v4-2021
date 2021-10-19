@@ -10,6 +10,7 @@
 			max-width: 800px;
 			width: 95%;
 			font: 18px / 1.5 sans-serif;
+			color:{{ color }};
 		}
 		.example-wrapper code {
 			background: #F5F5F5;
@@ -18,9 +19,9 @@
 	</style>
 
 	<div class="example-wrapper">
-		<h1>Table de {{ n }}! ✅</h1>
+		<h1 align="center">Table de {{ n }}! ✅</h1>
 		<ul>
-			<table border="1" cellpadding="5">
+			<table border="1" cellpadding="5" align="center" >
                 <th>n</th>
                 <th>m</th>
                 <th>résultat</th>
@@ -31,11 +32,7 @@
                         <td>={{ n*i }}</td>
 					</tr>
 				{% endfor %}
-
 			</table>
-
-
 		</ul>
-
 	</div>
 {% endblock %}
