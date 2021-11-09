@@ -19,17 +19,19 @@
 	</style>
 
 	<div class="example-wrapper">
-		<h1 align="center">Table de {{ n }}! ✅</h1>
+		<h1 align="center">Table de {{ calc_name }} par {{ n }}! ✅</h1>
 		<ul>
 			<table border="1" cellpadding="5" align="center" >
                 <th>n</th>
                 <th>m</th>
                 <th>résultat</th>
-				{% for i in 0.. m %}
+				{% for calculation in calculations %}
 					<tr>
-						<td align=center>{{ n }}</td> 
-                        <td>*{{ i }}</td>
-                        <td>={{ n*i }}</td>
+						<td>={{ calculation.indice }}</td>
+						<td> x </td> 
+						<td>{{ n }}</td> 
+                        <td> = </td>
+                        <td>={{ calculation.result }}</td>
 					</tr>
 				{% endfor %}
 			</table>
